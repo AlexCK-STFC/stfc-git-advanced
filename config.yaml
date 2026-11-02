@@ -72,6 +72,7 @@ episodes:
 - 03-atomic-commits.md
 - 04-reflog-safety-net.md
 - 05-staging-amend-reset.md
+- 06-interactive-rebase.md
 
 # Information for Learners
 learners:
