@@ -79,6 +79,7 @@ episodes:
 - 10-history-archaeology.md
 - 11-pull-requests.md
 - 12-ci-and-quality.md
+- 13-releases-and-cherry-pick.md
 
 # Information for Learners
 learners:
