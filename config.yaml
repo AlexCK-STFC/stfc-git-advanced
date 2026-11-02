@@ -68,6 +68,7 @@ contact: '210735915+AlexCK-STFC@users.noreply.github.com' # FIXME
 # Order of episodes in your lesson
 episodes:
 - 01-welcome-and-story.md
+- 02-mental-model.md
 
 # Information for Learners
 learners:
