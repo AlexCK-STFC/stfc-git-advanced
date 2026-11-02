@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 530" width="1000" height="530" role="img">
+<title>The same change as one commit and as two commits</title>
+<desc>On the left, one commit moves a file and changes it, so the old file is all red and the new file is all green and a reviewer cannot see what changed. On the right, the same work as two commits: a pure move with no changed lines, then a small diff showing only the real change.</desc>
+<rect x="0" y="0" width="1000" height="530" fill="#ffffff" stroke="none" stroke-width="0" rx="0"/>
+<rect x="10" y="10" width="470" height="510" fill="#ffffff" stroke="#bbb" stroke-width="1" rx="8"/>
+<text x="25" y="36" font-family="DejaVu Sans, Arial, sans-serif" font-size="17" fill="#222" font-weight="bold" text-anchor="start" xml:space="preserve">One commit</text>
+<text x="25" y="56" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" fill="#555" font-weight="normal" text-anchor="start" xml:space="preserve">“Move normalise and add a mode option”</text>
+<rect x="25" y="70" width="440" height="20" fill="#e8e8e8" stroke="#ccc" stroke-width="1" rx="0"/>
+<text x="31" y="84" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#333" font-weight="bold" text-anchor="start" xml:space="preserve">peakfinder/normalise.py   (deleted)</text>
+<rect x="25" y="90" width="440" height="20" fill="#ffdce0" stroke="none" stroke-width="0" rx="0"/>
+<text x="31" y="104" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#a40000" font-weight="normal" text-anchor="start" xml:space="preserve">- import numpy as np</text>
+<rect x="25" y="110" width="440" height="20" fill="#ffdce0" stroke="none" stroke-width="0" rx="0"/>
+<text x="31" y="124" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#a40000" font-weight="normal" text-anchor="start" xml:space="preserve">- </text>
+<rect x="25" y="130" width="440" height="20" fill="#ffdce0" stroke="none" stroke-width="0" rx="0"/>
+<text x="31" y="144" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#a40000" font-weight="normal" text-anchor="start" xml:space="preserve">- </text>
+<rect x="25" y="150" width="440" height="20" fill="#ffdce0" stroke="none" stroke-width="0" rx="0"/>
+<text x="31" y="164" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#a40000" font-weight="normal" text-anchor="start" xml:space="preserve">- def normalise(y):</text>
+<rect x="25" y="170" width="440" height="20" fill="#ffdce0" stroke="none" stroke-width="0" rx="0"/>
+<text x="31" y="184" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#a40000" font-weight="normal" text-anchor="start" xml:space="preserve">-     &quot;&quot;&quot;Scale y so that it runs from 0 to 1.&quot;&quot;&quot;</text>
+<rect x="25" y="190" width="440" height="20" fill="#ffdce0" stroke="none" stroke-width="0" rx="0"/>
+<text x="31" y="204" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#a40000" font-weight="normal" text-anchor="start" xml:space="preserve">-     y = np.asarray(y, dtype=float)</text>
+<rect x="25" y="210" width="440" height="20" fill="#ffdce0" stroke="none" stroke-width="0" rx="0"/>
+<text x="31" y="224" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#a40000" font-weight="normal" text-anchor="start" xml:space="preserve">-     return (y - y.min()) / (y.max() - y.min())</text>
+<rect x="25" y="240" width="440" height="20" fill="#e8e8e8" stroke="#ccc" stroke-width="1" rx="0"/>
+<text x="31" y="254" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#333" font-weight="bold" text-anchor="start" xml:space="preserve">peakfinder/scaling/normalise.py   (new file)</text>
+<rect x="25" y="260" width="440" height="20" fill="#ccffd8" stroke="none" stroke-width="0" rx="0"/>
+<text x="31" y="274" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#0b6b1f" font-weight="normal" text-anchor="start" xml:space="preserve">+ import numpy as np</text>
+<rect x="25" y="280" width="440" height="20" fill="#ccffd8" stroke="none" stroke-width="0" rx="0"/>
+<text x="31" y="294" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#0b6b1f" font-weight="normal" text-anchor="start" xml:space="preserve">+ </text>
+<rect x="25" y="300" width="440" height="20" fill="#ccffd8" stroke="none" stroke-width="0" rx="0"/>
+<text x="31" y="314" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#0b6b1f" font-weight="normal" text-anchor="start" xml:space="preserve">+ </text>
+<rect x="25" y="320" width="440" height="20" fill="#ccffd8" stroke="none" stroke-width="0" rx="0"/>
+<text x="31" y="334" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#0b6b1f" font-weight="normal" text-anchor="start" xml:space="preserve">+ def normalise(y, mode=&quot;range&quot;):</text>
+<rect x="25" y="340" width="440" height="20" fill="#ccffd8" stroke="none" stroke-width="0" rx="0"/>
+<text x="31" y="354" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#0b6b1f" font-weight="normal" text-anchor="start" xml:space="preserve">+     &quot;&quot;&quot;Scale y. mode is &#x27;range&#x27;, &#x27;max&#x27; or &#x27;area&#x27;.&quot;&quot;&quot;</text>
+<rect x="25" y="360" width="440" height="20" fill="#ccffd8" stroke="none" stroke-width="0" rx="0"/>
+<text x="31" y="374" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#0b6b1f" font-weight="normal" text-anchor="start" xml:space="preserve">+     y = np.asarray(y, dtype=float)</text>
+<rect x="25" y="380" width="440" height="20" fill="#ccffd8" stroke="none" stroke-width="0" rx="0"/>
+<text x="31" y="394" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#0b6b1f" font-weight="normal" text-anchor="start" xml:space="preserve">+     if mode == &quot;range&quot;:</text>
+<rect x="25" y="400" width="440" height="20" fill="#ccffd8" stroke="none" stroke-width="0" rx="0"/>
+<text x="31" y="414" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#0b6b1f" font-weight="normal" text-anchor="start" xml:space="preserve">+         return (y - y.min()) / (y.max() - y.min())</text>
+<rect x="25" y="420" width="440" height="20" fill="#ccffd8" stroke="none" stroke-width="0" rx="0"/>
+<text x="31" y="434" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#0b6b1f" font-weight="normal" text-anchor="start" xml:space="preserve">+     ...</text>
+<text x="245" y="474" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" fill="#a40000" font-weight="bold" text-anchor="middle" xml:space="preserve">All red, then all green. What changed?</text>
+<text x="245" y="494" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" fill="#555" font-weight="normal" text-anchor="middle" xml:space="preserve">The reviewer has to read every line as if it were new.</text>
+<rect x="500" y="10" width="490" height="510" fill="#ffffff" stroke="#bbb" stroke-width="1" rx="8"/>
+<text x="515" y="36" font-family="DejaVu Sans, Arial, sans-serif" font-size="17" fill="#222" font-weight="bold" text-anchor="start" xml:space="preserve">Two commits</text>
+<text x="515" y="66" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" fill="#555" font-weight="normal" text-anchor="start" xml:space="preserve">1.  “Move normalise into its own module”</text>
+<rect x="515" y="76" width="460" height="20" fill="#e8e8e8" stroke="#ccc" stroke-width="1" rx="0"/>
+<text x="521" y="90" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="11" fill="#333" font-weight="bold" text-anchor="start" xml:space="preserve">rename peakfinder/normalise.py → peakfinder/scaling/normalise.py</text>
+<rect x="515" y="96" width="460" height="20" fill="#f1f1f1" stroke="none" stroke-width="0" rx="0"/>
+<text x="521" y="110" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#555" font-weight="normal" text-anchor="start" xml:space="preserve">  similarity 100%: no lines changed</text>
+<text x="745" y="148" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" fill="#0b6b1f" font-weight="bold" text-anchor="middle" xml:space="preserve">Skim it, run the tests, move on.</text>
+<text x="515" y="190" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" fill="#555" font-weight="normal" text-anchor="start" xml:space="preserve">2.  “Add a mode option to normalise”</text>
+<rect x="515" y="200" width="460" height="20" fill="#e8e8e8" stroke="#ccc" stroke-width="1" rx="0"/>
+<text x="521" y="214" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#333" font-weight="bold" text-anchor="start" xml:space="preserve">peakfinder/scaling/normalise.py</text>
+<rect x="515" y="220" width="460" height="20" fill="#fafafa" stroke="none" stroke-width="0" rx="0"/>
+<text x="521" y="234" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#555" font-weight="normal" text-anchor="start" xml:space="preserve">  import numpy as np</text>
+<rect x="515" y="240" width="460" height="20" fill="#fafafa" stroke="none" stroke-width="0" rx="0"/>
+<text x="521" y="254" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#555" font-weight="normal" text-anchor="start" xml:space="preserve">  </text>
+<rect x="515" y="260" width="460" height="20" fill="#ffdce0" stroke="none" stroke-width="0" rx="0"/>
+<text x="521" y="274" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#a40000" font-weight="normal" text-anchor="start" xml:space="preserve">- def normalise(y):</text>
+<rect x="515" y="280" width="460" height="20" fill="#ffdce0" stroke="none" stroke-width="0" rx="0"/>
+<text x="521" y="294" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#a40000" font-weight="normal" text-anchor="start" xml:space="preserve">-     &quot;&quot;&quot;Scale y so that it runs from 0 to 1.&quot;&quot;&quot;</text>
+<rect x="515" y="300" width="460" height="20" fill="#ccffd8" stroke="none" stroke-width="0" rx="0"/>
+<text x="521" y="314" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#0b6b1f" font-weight="normal" text-anchor="start" xml:space="preserve">+ def normalise(y, mode=&quot;range&quot;):</text>
+<rect x="515" y="320" width="460" height="20" fill="#ccffd8" stroke="none" stroke-width="0" rx="0"/>
+<text x="521" y="334" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#0b6b1f" font-weight="normal" text-anchor="start" xml:space="preserve">+     &quot;&quot;&quot;Scale y. mode is &#x27;range&#x27;, &#x27;max&#x27; or &#x27;area&#x27;.&quot;&quot;&quot;</text>
+<rect x="515" y="340" width="460" height="20" fill="#fafafa" stroke="none" stroke-width="0" rx="0"/>
+<text x="521" y="354" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#555" font-weight="normal" text-anchor="start" xml:space="preserve">      y = np.asarray(y, dtype=float)</text>
+<rect x="515" y="360" width="460" height="20" fill="#ccffd8" stroke="none" stroke-width="0" rx="0"/>
+<text x="521" y="374" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#0b6b1f" font-weight="normal" text-anchor="start" xml:space="preserve">+     if mode == &quot;range&quot;:</text>
+<rect x="515" y="380" width="460" height="20" fill="#ccffd8" stroke="none" stroke-width="0" rx="0"/>
+<text x="521" y="394" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#0b6b1f" font-weight="normal" text-anchor="start" xml:space="preserve">+         return (y - y.min()) / (y.max() - y.min())</text>
+<rect x="515" y="400" width="460" height="20" fill="#ccffd8" stroke="none" stroke-width="0" rx="0"/>
+<text x="521" y="414" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="12" fill="#0b6b1f" font-weight="normal" text-anchor="start" xml:space="preserve">+     ...</text>
+<text x="745" y="454" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" fill="#0b6b1f" font-weight="bold" text-anchor="middle" xml:space="preserve">A small diff about one idea.</text>
+<text x="745" y="474" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" fill="#555" font-weight="normal" text-anchor="middle" xml:space="preserve">Spend your attention on this one.</text>
+</svg>

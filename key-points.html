@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Lesson Title: Key Points</title>
+<title>Advanced Version Control with Git: Key Points</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="assets/themetoggle.js"></script><link rel="stylesheet" type="text/css" href="assets/styles.css">
 <script src="assets/scripts.js" type="text/javascript"></script><!-- mathjax --><!-- NOTE: https://docs.mathjax.org/en/latest/output/mathml.html#mathml-support --><!-- Changes from V2 to V4: https://mathjax.github.io/MathJax-demos-web/convert-configuration/convert-configuration.html
@@ -26,22 +26,22 @@
             load: ['a11y/assistive-mml', '[tex]/noerrors']
         }
     };
-    </script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><!-- Responsive Favicon for The Carpentries --><link rel="apple-touch-icon" sizes="180x180" href="favicons/incubator/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicons/incubator/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicons/incubator/favicon-16x16.png">
-<link rel="manifest" href="favicons/incubator/site.webmanifest">
-<link rel="mask-icon" href="favicons/incubator/safari-pinned-tab.svg" color="#5bbad5">
+    </script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><!-- Responsive Favicon for The Carpentries --><link rel="apple-touch-icon" sizes="180x180" href="favicons/swc/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicons/swc/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicons/swc/favicon-16x16.png">
+<link rel="manifest" href="favicons/swc/site.webmanifest">
+<link rel="mask-icon" href="favicons/swc/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
 </head>
 <body>
-    <header id="top" class="navbar navbar-expand-md top-nav incubator"><svg xmlns="http://www.w3.org/2000/svg" class="d-none"><symbol id="check2" viewbox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path></symbol><symbol id="circle-half" viewbox="0 0 16 16"><path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path></symbol><symbol id="moon-stars-fill" viewbox="0 0 16 16"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path><path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path></symbol><symbol id="sun-fill" viewbox="0 0 16 16"><path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path></symbol></svg><a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
+    <header id="top" class="navbar navbar-expand-md top-nav software"><svg xmlns="http://www.w3.org/2000/svg" class="d-none"><symbol id="check2" viewbox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path></symbol><symbol id="circle-half" viewbox="0 0 16 16"><path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path></symbol><symbol id="moon-stars-fill" viewbox="0 0 16 16"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path><path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path></symbol><symbol id="sun-fill" viewbox="0 0 16 16"><path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path></symbol></svg><a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
         <a href="index.html">
-        <img id="incubator-logo" alt="Carpentries Incubator" src="assets/images/incubator-logo.svg"></a>
+        <img id="swc-logo" alt="Software Carpentry" src="assets/images/software-logo.svg"></a>
 
         <span class="badge text-bg-danger">
           <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
@@ -93,17 +93,17 @@
 </div>
     </div>
   </div>
-</header><nav class="navbar navbar-expand-xl bottom-nav incubator" aria-label="Main Navigation"><div class="container-fluid nav-container">
+</header><nav class="navbar navbar-expand-xl bottom-nav software" aria-label="Main Navigation"><div class="container-fluid nav-container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
       <span class="navbar-toggler-icon"></span>
       <span class="menu-title">Menu</span>
     </button>
     <div class="nav-logo">
       <a href="index.html">
-      <img class="small-logo" alt="Carpentries Incubator" src="assets/images/incubator-logo-sm.svg"></a>
+      <img class="small-logo" alt="Software Carpentry" src="assets/images/software-logo-sm.svg"></a>
     </div>
     <div class="lesson-title-md">
-      Lesson Title
+      Advanced Version Control with Git
     </div>
     <div class="search-icon-sm">
       <!-- TODO: do not show until we have search
@@ -114,7 +114,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 <li class="nav-item">
           <span class="lesson-title">
-            Lesson Title
+            Advanced Version Control with Git
           </span>
         </li>
         <li class="nav-item">
@@ -244,7 +244,163 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Using Markdown</a>
+        <a href="01-welcome-and-story.html">1. Welcome and the Story</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="02-mental-model.html">2. A Mental Model: Snapshots and Labels</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="03-atomic-commits.html">3. Planning and Atomic Commits</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="04-reflog-safety-net.html">4. The Safety Net: Reflog</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="05-staging-amend-reset.html">5. Shaping a Commit: Staging, Amend, Reset and Restore</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="06-interactive-rebase.html">6. Interactive Rebase: Rewriting a Messy Branch</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush8">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading8">
+        <a href="07-feature-workflow.html">7. The Daily Loop: Fixup and Autosquash</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush9">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading9">
+        <a href="08-day2-recap.html">8. Day 2 Recap and Warm-up</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush10">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading10">
+        <a href="09-rebase-vs-merge.html">9. Rebase vs Merge, and Resolving Conflicts</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush11">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading11">
+        <a href="10-history-archaeology.html">10. Tracking Down a Bug: Blame and Bisect</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush12">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading12">
+        <a href="11-pull-requests.html">11. Pull Requests: Authoring and Reviewing</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush13">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading13">
+        <a href="12-ci-and-quality.html">12. Catching Problems Early: Shift Left and CI</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush14">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading14">
+        <a href="13-releases-and-cherry-pick.html">13. Releases: Versions, Tags and Cherry-pick</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush15">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading15">
+        <a href="14-tooling-and-wrapup.html">14. Tooling and Wrap-up</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -326,17 +482,198 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Key Points</h1>
         
-<section id="introduction"><h2 class="section-heading"><a href="introduction.html">Using Markdown</a></h2>
+<section id="01-welcome-and-story"><h2 class="section-heading"><a href="01-welcome-and-story.html">Welcome and the Story</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>This workshop is about <em>curating</em> history: leaving commits
+that are easy to review, merge and understand</li>
+<li>The same code can have a confusing history or a clear one, and the
+clear one is far easier to work with</li>
+<li>Day 1 is about producing good history, and day 2 is about sharing
+and maintaining it</li>
+<li>You’ll work in pairs, and your partner reviews your pull
+request</li>
+</ul></section><section id="02-mental-model"><h2 class="section-heading"><a href="02-mental-model.html">A Mental Model: Snapshots and Labels</a></h2>
+<hr class="half-width">
+<ul>
+<li>A commit is a snapshot of the project plus a pointer to its parent.
+Diffs are worked out when needed</li>
+<li>A commit’s hash depends on its contents <em>and</em> its parent, so
+changing one commit changes all those after it</li>
+<li>You can’t edit a commit, only make a new one. The old one is still
+there</li>
+<li>Branches and <code>HEAD</code> are just labels pointing at commits.
+Committing moves the label</li>
+</ul></section><section id="03-atomic-commits"><h2 class="section-heading"><a href="03-atomic-commits.html">Planning and Atomic Commits</a></h2>
+<hr class="half-width">
+<ul>
+<li>Plan your commits before you start: a short list keeps each change
+small</li>
+<li>An atomic commit does one logical thing and leaves the project
+working</li>
+<li>A commit message has a short imperative subject, and a body that
+says <em>why</em> when it isn’t obvious</li>
+<li>Atomic commits make review, revert, cherry-pick and bisect much
+easier</li>
+</ul></section><section id="04-reflog-safety-net"><h2 class="section-heading"><a href="04-reflog-safety-net.html">The Safety Net: Reflog</a></h2>
+<hr class="half-width">
+<ul>
+<li>Git rarely deletes commits straight away. The reflog records where
+<code>HEAD</code> has been, so you can find them</li>
+<li>Recover by copying the hash from <code>git reflog</code> and using
+<code>git reset --hard &lt;hash&gt;</code> or
+<code>git branch &lt;name&gt; &lt;hash&gt;</code>
+</li>
+<li>The reflog is local and expires, and doesn’t cover uncommitted
+work</li>
+<li>Commit before trying something risky</li>
+</ul></section><section id="05-staging-amend-reset"><h2 class="section-heading"><a href="05-staging-amend-reset.html">Shaping a Commit: Staging, Amend, Reset and Restore</a></h2>
+<hr class="half-width">
+<ul>
+<li>The staging area lets you assemble a commit. Stage hunks or
+individual lines in VS Code (or with <code>git add -p</code>)</li>
+<li>
+<code>git commit --amend</code> replaces the last commit, so only do
+it for commits you haven’t shared</li>
+<li>
+<code>git reset</code> moves the branch label: <code>--soft</code>
+keeps changes staged, <code>--mixed</code> (default) keeps them
+unstaged, <code>--hard</code> discards them</li>
+<li>
+<code>git restore</code> discards edits or unstages files without
+moving any label</li>
+</ul></section><section id="06-interactive-rebase"><h2 class="section-heading"><a href="06-interactive-rebase.html">Interactive Rebase: Rewriting a Messy Branch</a></h2>
+<hr class="half-width">
+<ul>
+<li>
+<code>git rebase -i &lt;base&gt;</code> lets you edit every commit
+on a branch since <code>&lt;base&gt;</code>
+</li>
+<li>The todo list is oldest first: change the command word to reword,
+drop, fixup or edit, and move lines to reorder</li>
+<li>Rebase makes new commits. The old ones remain, so a backup branch or
+the reflog gets you back</li>
+<li>Use <code>edit</code> and <code>git reset HEAD^</code> to split a
+commit into several</li>
+<li>
+<code>git rebase --abort</code> undoes a rebase that is going
+badly</li>
+<li>Only rewrite history that nobody else has yet</li>
+</ul></section><section id="07-feature-workflow"><h2 class="section-heading"><a href="07-feature-workflow.html">The Daily Loop: Fixup and Autosquash</a></h2>
+<hr class="half-width">
+<ul>
+<li>Plan a few commits, then commit small changes as you go</li>
+<li>When you spot a mistake in an earlier commit,
+<code>git commit --fixup &lt;commit&gt;</code> leaves a note, without
+stopping your flow</li>
+<li>Before sharing, <code>git rebase -i --autosquash main</code> folds
+each fixup into its target, and you can also reword, reorder, drop or
+edit commits until the history reads well</li>
+<li>
+<code>git rebase main --exec "pytest -q"</code> checks every commit
+passes</li>
+</ul></section><section id="08-day2-recap"><h2 class="section-heading"><a href="08-day2-recap.html">Day 2 Recap and Warm-up</a></h2>
+<hr class="half-width">
+<ul>
+<li>Day 1 was about producing good history: snapshots, atomic commits,
+rewriting and the daily loop</li>
+<li>Day 2 is about sharing it and working alongside other people’s
+changes</li>
+<li>Check your branch and your fork are in order before starting</li>
+</ul></section><section id="09-rebase-vs-merge"><h2 class="section-heading"><a href="09-rebase-vs-merge.html">Rebase vs Merge, and Resolving Conflicts</a></h2>
+<hr class="half-width">
+<ul>
+<li>A fast-forward just moves a label, so <code>main</code> stays a
+straight line</li>
+<li>Merge joins two tips with a merge commit. Rebase moves your branch’s
+base, and replays your commits as new ones</li>
+<li>A conflict means both sides changed the same lines. Resolve it by
+editing the result to contain what you want. The VS Code merge editor
+makes this easy</li>
+<li>In a rebase, “Current” is the branch you’re rebasing onto and
+“Incoming” is your commit</li>
+<li>After a rebase, push with <code>--force-with-lease</code>. Never
+follow git’s hint to <code>git pull</code>
+</li>
+<li>Only rewrite history that nobody else is depending on</li>
+<li>For pull requests, “Rebase and merge” keeps your curated commits and
+a straight history</li>
+</ul></section><section id="10-history-archaeology"><h2 class="section-heading"><a href="10-history-archaeology.html">Tracking Down a Bug: Blame and Bisect</a></h2>
+<hr class="half-width">
+<ul>
+<li>Blame shows which commit last changed each line (in VS Code:
+<strong>Git: Toggle Git Blame Editor Decoration</strong>). It shows only
+the last change, so it isn’t proof of the cause</li>
+<li>
+<code>git bisect</code> binary-searches history for the first commit
+where a test fails. <code>git bisect run &lt;command&gt;</code>
+automates it. Always finish with <code>git bisect reset</code>
+</li>
+<li>Fix bugs you find on a branch of their own, so the fix is a single
+idea that can be reviewed and reused</li>
+</ul></section><section id="11-pull-requests"><h2 class="section-heading"><a href="11-pull-requests.html">Pull Requests: Authoring and Reviewing</a></h2>
+<hr class="half-width">
+<ul>
+<li>A pull request is a story. Review your own first: it should read
+well, each commit should pass, it should be up to date and contain only
+your change</li>
+<li>Write a description that says what, why, and how to check it</li>
+<li>Review one commit at a time. Be specific, ask questions, mark small
+things with <code>nit:</code>, suggest changes, and say what’s good</li>
+<li>Respond to feedback with <code>--fixup</code> commits that you push
+as they are, and autosquash when it’s approved (say so first). If your
+team squash-merges, plain “address review” commits are fine</li>
+<li>
+<code>git diff @{u} HEAD</code> printing nothing (or <strong>Compare
+with Remote</strong> in VS Code showing no files) proves that tidying
+the history didn’t change the code</li>
+<li>Use <strong>Rebase and merge</strong> to keep your curated commits
+and a straight history</li>
+<li>A pull request from a fork defaults to the original repository, so
+check the base repository is your own fork</li>
+</ul></section><section id="12-ci-and-quality"><h2 class="section-heading"><a href="12-ci-and-quality.html">Catching Problems Early: Shift Left and CI</a></h2>
+<hr class="half-width">
+<ul>
+<li>“Shift left”: find problems as early, cheaply and quickly as you
+can. Push each check left until it becomes too slow or annoying to run
+there</li>
+<li>Formatting and linting belong in your editor. Tests you run yourself
+before pushing, and CI runs them again for everyone, plus anything
+slower</li>
+<li>Pre-commit hooks are an optional personal convenience, and can be
+skipped. CI is the shared gate that can’t</li>
+<li>A GitHub Actions workflow is a YAML file in
+<code>.github/workflows/</code>: when to run, where, and a list of
+steps</li>
+<li>Fix a failing check in the commit it belongs to
+(<code>--fixup</code>, then autosquash), so that every commit
+passes</li>
+</ul></section><section id="13-releases-and-cherry-pick"><h2 class="section-heading"><a href="13-releases-and-cherry-pick.html">Releases: Versions, Tags and Cherry-pick</a></h2>
+<hr class="half-width">
+<ul>
+<li>Most projects follow a loop: develop on <code>main</code>, release
+with a version number and a tag, fix bugs on <code>main</code>, and
+release again</li>
+<li>Semantic versioning (<code>MAJOR.MINOR.PATCH</code>) tells users
+what to expect from an upgrade</li>
+<li>A tag is a label that never moves, unlike <code>HEAD</code> and
+branches. Use annotated tags (<code>git tag -a</code>) for releases, and
+push them explicitly</li>
+<li>If users can upgrade, fix on <code>main</code> and release again. If
+they can’t, patch the old release on a release branch</li>
+<li>
+<code>git cherry-pick -x &lt;commit&gt;</code> replays one commit’s
+change as a new commit, and atomic commits are what make it safe</li>
+</ul></section><section id="14-tooling-and-wrapup"><h2 class="section-heading"><a href="14-tooling-and-wrapup.html">Tooling and Wrap-up</a></h2>
+<hr class="half-width">
+<ul>
+<li>Aliases and settings are personal choices: git’s defaults are fine,
+and you only need to change what’s bothering you</li>
+<li>VS Code covers staging, amending, history, blame, conflicts, stash
+and cherry-pick. Fixup, interactive rebase, the reflog, bisect and
+<code>range-diff</code> need the terminal</li>
+<li>Pick one habit to adopt first. Atomic commits and fixup with
+autosquash give the most for the least effort</li>
 </ul></section>
 </div>
     </main>
@@ -350,14 +687,14 @@ locally</li>
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/README.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/AlexCK-STFC/stfc-git-advanced/edit/main/README.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/carpentries/workbench-template-md/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/carpentries/workbench-template-md/" class="external-link">Source</a></p>
+        | <a href="https://github.com/AlexCK-STFC/stfc-git-advanced/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/AlexCK-STFC/stfc-git-advanced/" class="external-link">Source</a></p>
         <p>
         <a href="citation.html">Cite</a>
-        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="mailto:210735915+AlexCK-STFC@users.noreply.github.com">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -377,18 +714,18 @@ locally</li>
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://carpentries.github.io/workbench-template-md/key-points.html",
+  "@id": "https://AlexCK-STFC.github.io/stfc-git-advanced/key-points.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "software, data, lesson, The Carpentries",
   "name": "Key Points",
   "creativeWorkStatus": "active",
-  "url": "https://carpentries.github.io/workbench-template-md/key-points.html",
-  "identifier": "https://carpentries.github.io/workbench-template-md/key-points.html",
+  "url": "https://AlexCK-STFC.github.io/stfc-git-advanced/key-points.html",
+  "identifier": "https://AlexCK-STFC.github.io/stfc-git-advanced/key-points.html",
   "dateCreated": "2026-10-30",
-  "dateModified": "2026-10-30",
-  "datePublished": "2026-10-30"
+  "dateModified": "2026-11-02",
+  "datePublished": "2026-11-02"
 }
 
   </script><script>

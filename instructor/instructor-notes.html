@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Lesson Title: Instructor Notes</title>
+<title>Advanced Version Control with Git: Instructor Notes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="../assets/themetoggle.js"></script><link rel="stylesheet" type="text/css" href="../assets/styles.css">
 <script src="../assets/scripts.js" type="text/javascript"></script><!-- mathjax --><!-- NOTE: https://docs.mathjax.org/en/latest/output/mathml.html#mathml-support --><!-- Changes from V2 to V4: https://mathjax.github.io/MathJax-demos-web/convert-configuration/convert-configuration.html
@@ -26,22 +26,22 @@
             load: ['a11y/assistive-mml', '[tex]/noerrors']
         }
     };
-    </script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><!-- Responsive Favicon for The Carpentries --><link rel="apple-touch-icon" sizes="180x180" href="../favicons/incubator/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicons/incubator/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../favicons/incubator/favicon-16x16.png">
-<link rel="manifest" href="../favicons/incubator/site.webmanifest">
-<link rel="mask-icon" href="../favicons/incubator/safari-pinned-tab.svg" color="#5bbad5">
+    </script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><!-- Responsive Favicon for The Carpentries --><link rel="apple-touch-icon" sizes="180x180" href="../favicons/swc/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicons/swc/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicons/swc/favicon-16x16.png">
+<link rel="manifest" href="../favicons/swc/site.webmanifest">
+<link rel="mask-icon" href="../favicons/swc/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
 </head>
 <body>
-    <header id="top" class="navbar navbar-expand-md top-nav incubator"><svg xmlns="http://www.w3.org/2000/svg" class="d-none"><symbol id="check2" viewbox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path></symbol><symbol id="circle-half" viewbox="0 0 16 16"><path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path></symbol><symbol id="moon-stars-fill" viewbox="0 0 16 16"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path><path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path></symbol><symbol id="sun-fill" viewbox="0 0 16 16"><path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path></symbol></svg><a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
+    <header id="top" class="navbar navbar-expand-md top-nav software"><svg xmlns="http://www.w3.org/2000/svg" class="d-none"><symbol id="check2" viewbox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path></symbol><symbol id="circle-half" viewbox="0 0 16 16"><path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path></symbol><symbol id="moon-stars-fill" viewbox="0 0 16 16"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path><path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path></symbol><symbol id="sun-fill" viewbox="0 0 16 16"><path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path></symbol></svg><a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
         <a href="index.html">
-        <img id="incubator-logo" alt="Carpentries Incubator" src="../assets/images/incubator-logo.svg"></a>
+        <img id="swc-logo" alt="Software Carpentry" src="../assets/images/software-logo.svg"></a>
 
         <span class="badge text-bg-danger">
           <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
@@ -93,17 +93,17 @@
 </div>
     </div>
   </div>
-</header><nav class="navbar navbar-expand-xl bottom-nav incubator" aria-label="Main Navigation"><div class="container-fluid nav-container">
+</header><nav class="navbar navbar-expand-xl bottom-nav software" aria-label="Main Navigation"><div class="container-fluid nav-container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
       <span class="navbar-toggler-icon"></span>
       <span class="menu-title">Menu</span>
     </button>
     <div class="nav-logo">
       <a href="index.html">
-      <img class="small-logo" alt="Carpentries Incubator" src="../assets/images/incubator-logo-sm.svg"></a>
+      <img class="small-logo" alt="Software Carpentry" src="../assets/images/software-logo-sm.svg"></a>
     </div>
     <div class="lesson-title-md">
-      Lesson Title
+      Advanced Version Control with Git
     </div>
     <div class="search-icon-sm">
       <!-- TODO: do not show until we have search
@@ -114,7 +114,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 <li class="nav-item">
           <span class="lesson-title">
-            Lesson Title
+            Advanced Version Control with Git
           </span>
         </li>
         <li class="nav-item">
@@ -245,7 +245,163 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Using Markdown</a>
+        <a href="01-welcome-and-story.html">1. Welcome and the Story</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="02-mental-model.html">2. A Mental Model: Snapshots and Labels</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="03-atomic-commits.html">3. Planning and Atomic Commits</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="04-reflog-safety-net.html">4. The Safety Net: Reflog</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="05-staging-amend-reset.html">5. Shaping a Commit: Staging, Amend, Reset and Restore</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="06-interactive-rebase.html">6. Interactive Rebase: Rewriting a Messy Branch</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush8">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading8">
+        <a href="07-feature-workflow.html">7. The Daily Loop: Fixup and Autosquash</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush9">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading9">
+        <a href="08-day2-recap.html">8. Day 2 Recap and Warm-up</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush10">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading10">
+        <a href="09-rebase-vs-merge.html">9. Rebase vs Merge, and Resolving Conflicts</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush11">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading11">
+        <a href="10-history-archaeology.html">10. Tracking Down a Bug: Blame and Bisect</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush12">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading12">
+        <a href="11-pull-requests.html">11. Pull Requests: Authoring and Reviewing</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush13">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading13">
+        <a href="12-ci-and-quality.html">12. Catching Problems Early: Shift Left and CI</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush14">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading14">
+        <a href="13-releases-and-cherry-pick.html">13. Releases: Versions, Tags and Cherry-pick</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush15">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading15">
+        <a href="14-tooling-and-wrapup.html">14. Tooling and Wrap-up</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -329,21 +485,1100 @@
         <h1>Instructor Notes</h1>
         
 
-<p>This is a placeholder file. Please add content here.</p>
+<p>This page is for the people running the workshop. It covers what to
+prepare, a run-sheet for each day, the solutions and how to rescue
+someone who is stuck, and how to maintain the lesson. Each episode also
+has an <strong>Instructor view</strong> box with its own timings, common
+problems and a bridge to the next episode.</p>
+<section><h2 class="section-heading" id="before-the-workshop">Before the workshop<a class="anchor" aria-label="anchor" href="#before-the-workshop"></a>
+</h2>
+<hr class="half-width">
+<p><strong>About a week before</strong></p>
+<ul class="task-list">
+<li>
+<p><label><input type="checkbox"><strong>Build and publish the
+example repository.</strong> Run
+<code>python tools/build_starter.py --force</code>. It builds
+<code>build/peakfinder</code> and checks its own output. Publish only
+the branches learners need, and <strong>not</strong> the
+<code>solution/*</code> branches:</label></p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="bu">cd</span> build/peakfinder</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="fu">git</span> remote add origin <span class="op">&lt;</span>the public course repository URL<span class="op">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a><span class="fu">git</span> push origin main background-subtraction colleague/normalise-modes untangle <span class="at">--tags</span></span></code></pre>
+</div>
+<p>The repository must be <strong>public</strong> (so learners can fork
+it). Then put its URL in <code>learners/setup.md</code>.</p>
+</li>
+<li><p><label><input type="checkbox"><strong>Keep the solutions
+somewhere safe.</strong> Push <em>everything</em> (including
+<code>solution/*</code>) to a <strong>private</strong> repository, or
+keep the <code>build/</code> folder on your laptop. Helpers use it to
+rescue people (see below).</label></p></li>
+<li><p><label><input type="checkbox"><strong>Email learners</strong>
+the setup page and the self-assessment, and ask them to finish the whole
+of step 6 (fork, clone, install, tests, push, enable Actions)
+<em>before</em> day 1.</label></p></li>
+<li><p><label><input type="checkbox"><strong>Do a dry run</strong> of
+both days, on a real GitHub fork, with a colleague as the learner. This
+is the only way to check the timings and the parts that run on GitHub
+(the pull request pages, the review buttons and above all the
+<strong>Actions workflow in episode 12</strong>, which I could check
+with a linter but not run). Remember to <strong>untick “Copy the default
+branch only”</strong>.</label></p></li>
+<li><p><label><input type="checkbox"><strong>Prepare for episodes 11
+and 12</strong> on your own fork: an example pull request with a few
+things to comment on (for people without a partner), and the
+<code>add-ci</code> pull request with a <strong>green</strong> run and a
+<strong>red</strong> run (or screenshots).</label></p></li>
+<li><p><label><input type="checkbox"><strong>Check versions:</strong>
+Git 2.30 or newer, a current VS Code, and the action versions in the
+episode 12 workflow (<code>actions/checkout</code>,
+<code>actions/setup-python</code>).</label></p></li>
+<li><p><label><input type="checkbox">Add the <strong>feedback
+link</strong> (episode 14) and the <strong>screenshots</strong> marked
+<code>FIXME</code> (fork page, Source Control, merge
+editor).</label></p></li>
+<li><p><label><input type="checkbox"><strong>Brief the
+helpers.</strong> They should read this page, and episodes 6, 7 and 9,
+and know the rescue commands below. Aim for one helper per 8 learners
+(online: one per breakout room if you can).</label></p></li>
+</ul>
+<p><strong>If you don’t use rebase yourself yet.</strong> Many
+instructors don’t, and that’s fine. Before teaching it, do the exercises
+in <strong>episodes 5, 6 and 7</strong> once on your own computer (about
+an hour), and practise the rescue commands. Everything in the lesson is
+safe, because of the backup branch and the reflog.</p>
+</section><section><h2 class="section-heading" id="day-1-run-sheet">Day 1 run-sheet<a class="anchor" aria-label="anchor" href="#day-1-run-sheet"></a>
+</h2>
+<hr class="half-width">
+<p>Times assume a 09:00 start and a 15-minute break after episode 4.
+They come from each episode’s own “teaching + exercises” times, so they
+leave <strong>about 44 minutes of slack</strong> (end 12:16).
+Follow-along sessions usually run over by a third, so treat the slack as
+spent.</p>
+<table class="table">
+<colgroup>
+<col width="25%">
+<col width="25%">
+<col width="25%">
+<col width="25%">
+</colgroup>
+<thead><tr>
+<th>Start</th>
+<th>Episode</th>
+<th>Check before moving on</th>
+<th>If you’re behind, cut</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>09:00</td>
+<td>
+<strong>01</strong> Welcome and the Story (15 min)</td>
+<td>Everyone is on <code>main</code> with a clean
+<code>git status</code>; <code>git branch -r</code> shows the other
+branches and <code>git tag</code> shows <code>v0.1.0</code> and
+<code>v0.2.0</code>; <code>pytest</code> passes; <code>git push</code>
+works; partners are collaborators on each other’s forks.</td>
+<td>Shorten the collaborator-invite walkthrough (email it
+beforehand).</td>
+</tr>
+<tr>
+<td>09:15</td>
+<td>
+<strong>02</strong> A Mental Model: Snapshots and Labels (22
+min)</td>
+<td>Nothing to check. Ask: <em>“what does a branch point at?”</em>
+</td>
+<td>Skip the <code>git hash-object</code> check.</td>
+</tr>
+<tr>
+<td>09:37</td>
+<td>
+<strong>03</strong> Planning and Atomic Commits (23 min)</td>
+<td>Everyone has <strong>written down</strong> their list of commits.
+They need it for episode 6.</td>
+<td>Collapse the prefixes callout; shorten the example.</td>
+</tr>
+<tr>
+<td>10:00</td>
+<td>
+<strong>04</strong> The Safety Net: Reflog (15 min)</td>
+<td>Everyone ends on <code>main</code> with a clean
+<code>git status</code> (no leftover <code>experiment</code> branch or
+README edits).</td>
+<td>Skip the knowledge check.</td>
+</tr>
+<tr>
+<td>10:30</td>
+<td><em>break back (15 min)</em></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10:30</td>
+<td>
+<strong>05</strong> Shaping a Commit: Staging, Amend, Reset and
+Restore (27 min)</td>
+<td>The <code>untangle</code> branch has <strong>two</strong> new
+commits (<code>--title</code>, then the markers), no <code>DEBUG</code>
+print, and <code>pytest</code> passes.</td>
+<td>Skip the <code>git add -p</code> callout and the reset knowledge
+check.</td>
+</tr>
+<tr>
+<td>10:57</td>
+<td>
+<strong>06</strong> Interactive Rebase: Rewriting a Messy Branch (43
+min)</td>
+<td>
+<code>background-subtraction</code> has <strong>seven</strong> clean
+commits; <strong><code>main</code> is unchanged and nobody merged the
+branch</strong>.</td>
+<td>
+<strong>Don’t cut.</strong> If behind, give out the finished todo
+from the solution earlier.</td>
+</tr>
+<tr>
+<td>11:40</td>
+<td>
+<strong>07</strong> The Daily Loop: Fixup and Autosquash (36
+min)</td>
+<td>A feature branch (<code>feature-prominence</code> or
+<code>feature-widths</code>) is <strong>pushed to the fork</strong>,
+with three clean commits and no <code>fixup!</code>; <code>main</code>
+is unchanged.</td>
+<td>Learners watch the short demo instead of typing it.</td>
+</tr>
+</tbody>
+</table></section><section><h2 class="section-heading" id="day-2-run-sheet">Day 2 run-sheet<a class="anchor" aria-label="anchor" href="#day-2-run-sheet"></a>
+</h2>
+<hr class="half-width">
+<p>A 15-minute break after episode 11. End 12:15, leaving <strong>about
+45 minutes of slack</strong>.</p>
+<table class="table">
+<colgroup>
+<col width="25%">
+<col width="25%">
+<col width="25%">
+<col width="25%">
+</colgroup>
+<thead><tr>
+<th>Start</th>
+<th>Episode</th>
+<th>Check before moving on</th>
+<th>If you’re behind, cut</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>09:00</td>
+<td>
+<strong>08</strong> Day 2 Recap and Warm-up (9 min)</td>
+<td>State check passed: clean tree, feature branch present on the fork.
+Standing rules said aloud (own fork; Rebase and merge).</td>
+<td>Skip the quiz; do the state check only.</td>
+</tr>
+<tr>
+<td>09:09</td>
+<td>
+<strong>09</strong> Rebase vs Merge, and Resolving Conflicts (35
+min)</td>
+<td>Feature rebased onto <code>main</code> (straight line), pushed with
+<code>--force-with-lease</code>, and <strong>one test still
+fails</strong> (the colleague’s). Nobody typed the merge demo.</td>
+<td>Skip the merge demo (the diagrams show the double back).</td>
+</tr>
+<tr>
+<td>09:44</td>
+<td>
+<strong>10</strong> Tracking Down a Bug: Blame and Bisect (30
+min)</td>
+<td>The fix is on <code>main</code> (fast-forwarded and pushed), the
+feature is rebased onto it, and <strong>all tests pass</strong>.</td>
+<td>Skip the by-hand bisect demo, then the <code>log -S/-L</code>
+callout.</td>
+</tr>
+<tr>
+<td>10:14</td>
+<td>
+<strong>11</strong> Pull Requests: Authoring and Reviewing (30
+min)</td>
+<td>A pull request is open <strong>on the learner’s own fork</strong>
+(not the course repo), reviewed by the partner, and a fixup pushed.
+Finishing is optional.</td>
+<td>Skip the Finishing section (squash and merge).</td>
+</tr>
+<tr>
+<td>10:59</td>
+<td><em>break back (15 min)</em></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10:59</td>
+<td>
+<strong>12</strong> Catching Problems Early: Shift Left and CI (26
+min)</td>
+<td>Actions enabled; the <code>add-ci</code> pull request has gone
+green, then red, then green again (or the fallback demo has been
+shown).</td>
+<td>Do the exercise as a demo, or use the fallback.</td>
+</tr>
+<tr>
+<td>11:25</td>
+<td>
+<strong>13</strong> Releases: Versions, Tags and Cherry-pick (35
+min)</td>
+<td>
+<code>release/0.2</code> and tag <code>v0.2.1</code> pushed, with
+the fix cherry-picked.</td>
+<td>Skip the optional GitHub release.</td>
+</tr>
+<tr>
+<td>12:00</td>
+<td>
+<strong>14</strong> Tooling and Wrap-up (15 min)</td>
+<td>Each person has named one habit to try.</td>
+<td>Read-afterwards: do only the take-aways.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The standing rules for day 2</strong> (said once, in episode
+8): every pull request is on the learner’s <strong>own fork</strong>,
+and you merge with <strong>Rebase and merge</strong>.</p>
+</section><section><h2 class="section-heading" id="solutions">Solutions<a class="anchor" aria-label="anchor" href="#solutions"></a>
+</h2>
+<hr class="half-width">
+<p>Every exercise has a <strong>solution</strong> box in the episode.
+The ones people most often need:</p>
+<table class="table">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr>
+<th>Exercise</th>
+<th>Where the answer is</th>
+<th>End state to check</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>03 smell test</td>
+<td>the solution box (a 7-commit list)</td>
+<td>learners wrote their own list</td>
+</tr>
+<tr>
+<td>05 untangle</td>
+<td>the solution box (VS Code and command line)</td>
+<td>
+<code>git log --oneline -3</code> shows two new commits;
+<code>git grep DEBUG</code> is empty</td>
+</tr>
+<tr>
+<td>06 rebase 1 and 2</td>
+<td>the solution boxes give the <strong>finished todo
+lists</strong>
+</td>
+<td>
+<code>git log --oneline main..</code> shows seven commits;
+<code>git diff --stat backup/background-subtraction</code> shows only
+<code>scratch_smoothing.py</code>
+</td>
+</tr>
+<tr>
+<td>07 features A/B</td>
+<td>the solution box</td>
+<td>three commits, no <code>fixup!</code>, <code>pytest</code>
+passes</td>
+</tr>
+<tr>
+<td>09 rebase and conflict</td>
+<td>the solution box gives the <strong>resolved
+<code>find_peaks</code></strong> for A and B</td>
+<td>straight line, one failing test left</td>
+</tr>
+<tr>
+<td>10 the fix</td>
+<td>the solution box</td>
+<td>
+<code>pytest</code> passes after the second rebase</td>
+</tr>
+<tr>
+<td>12 CI</td>
+<td>the solution box, and the workflow file in the episode</td>
+<td>green, red, then green</td>
+</tr>
+<tr>
+<td>13 release</td>
+<td>the solution box</td>
+<td>tag <code>v0.2.1</code> on <code>release/0.2</code>
+</td>
+</tr>
+</tbody>
+</table></section><section><h2 class="section-heading" id="rescuing-someone-who-is-stuck">Rescuing someone who is stuck<a class="anchor" aria-label="anchor" href="#rescuing-someone-who-is-stuck"></a>
+</h2>
+<hr class="half-width">
+<p>First, the general tools, which cover most problems:</p>
+<ul>
+<li>
+<strong><code>git status</code></strong> says what git thinks is
+happening and what to do next.</li>
+<li>
+<strong><code>git rebase --abort</code></strong> (or
+<code>git merge --abort</code>, <code>git cherry-pick --abort</code>)
+puts everything back.</li>
+<li>
+<strong><code>git reflog</code></strong> finds a lost commit
+(episode 4).</li>
+<li>
+<strong><code>git reset --hard origin/&lt;branch&gt;</code></strong>
+puts a branch back to what’s on their fork. Use it with care: it throws
+away local changes.</li>
+</ul>
+<p>For specific exercises, helpers need the solutions repository as a
+remote:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="fu">git</span> remote add solutions <span class="op">&lt;</span>the private solutions repository URL<span class="op">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a><span class="fu">git</span> fetch solutions</span></code></pre>
+</div>
+<table class="table">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead><tr>
+<th>Problem</th>
+<th>Rescue</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Episode 6: badly tangled, no backup</td>
+<td>
+<code>git switch -C background-subtraction origin/background-subtraction</code>
+starts again from the messy branch. Or, to give them the
+<em>finished</em> branch:
+<code>git switch -C background-subtraction solutions/solution/background-subtraction</code>
+</td>
+</tr>
+<tr>
+<td>Episode 7: a lost feature branch</td>
+<td>
+<code>git switch -C feature-prominence solutions/solution/feature-prominence</code>
+(or <code>feature-widths</code>)</td>
+</tr>
+<tr>
+<td>Episode 9: stuck in the conflict</td>
+<td>
+<code>git rebase --abort</code>, then redo it, pasting the resolved
+<code>find_peaks</code> from the episode’s solution box</td>
+</tr>
+<tr>
+<td>Episode 10: missed the fix</td>
+<td>
+<code>git switch main</code>, then
+<code>git cherry-pick solutions/solution/fix-normalise</code>
+</td>
+</tr>
+<tr>
+<td>Their <code>main</code> has stray commits</td>
+<td>
+<code>git switch main</code>, then
+<code>git reset --hard origin/main</code> (check
+<code>origin/main</code> is the right one)</td>
+</tr>
+<tr>
+<td>No tags in their fork</td>
+<td>They ticked “Copy the default branch only”. Re-fork with it
+unticked, or
+<code>git fetch &lt;original repository URL&gt; --tags</code>
+</td>
+</tr>
+<tr>
+<td>Pull request opened against the course repository</td>
+<td>Close it, and open it again on their own fork</td>
+</tr>
+</tbody>
+</table></section><section><h2 class="section-heading" id="online-delivery">Online delivery<a class="anchor" aria-label="anchor" href="#online-delivery"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>Put people in <strong>pairs in breakout rooms</strong> for the
+exercises, and have helpers visit the rooms. Create the rooms before you
+need them, and keep a list of who is with whom.</li>
+<li>Share your <strong>VS Code with the terminal visible</strong>, at a
+large font, as people follow your commands.</li>
+<li>Use the chat for <strong>“done” reactions</strong> after each step,
+so you can see who is behind without stopping.</li>
+<li>Pairs that lose a partner can review the prepared pull request
+(episode 11) and follow the prepared Actions run (episode 12).</li>
+</ul></section><section><h2 class="section-heading" id="looking-after-the-lesson">Looking after the lesson<a class="anchor" aria-label="anchor" href="#looking-after-the-lesson"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>
+<strong>Rebuild the example repository</strong> with
+<code>python tools/build_starter.py --force</code>. It checks that the
+tests pass and fail where the episodes expect, that the example features
+conflict with the colleague’s work, and that the fix cherry-picks
+cleanly.</li>
+<li>
+<strong>Any change under <code>tools/</code> changes every commit
+hash</strong>, even a name or a date. After a rebuild, run
+<code>python tools/remap_hashes.py &lt;old hashes file&gt;</code> to
+update the hashes quoted in the episodes (the steps are in its
+docstring).</li>
+<li>
+<strong>Check the diagrams</strong> with
+<code>node tools/check_diagrams/check.mjs</code> (add
+<code>--render &lt;folder&gt;</code> to draw images). It needs
+<code>npm install</code> once.</li>
+<li>
+<strong>Check the lesson</strong> with
+<code>sandpaper::validate_lesson(".")</code> in R, and preview it with
+<code>sandpaper::serve()</code>.</li>
+</ul>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
-
-
-      <section id="aggregate-instructor-notes"><section id="introduction"><h2 class="section-heading"><a href="introduction.html">Using Markdown</a></h2>
+ --></section><section id="aggregate-instructor-notes"><section id="01-welcome-and-story"><h2 class="section-heading"><a href="01-welcome-and-story.html">Welcome and the Story</a></h2>
 <hr class="half-width">
-<h3 id="introduction-headingInstructor1">
-<a href="introduction.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#introduction-headingInstructor1"></a>
+<h3 id="01-welcome-and-story-headingInstructor1">
+<a href="01-welcome-and-story.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#01-welcome-and-story-headingInstructor1"></a>
 </h3>
-<p>Inline instructor notes can help inform instructors of timing
-challenges associated with the lessons. They appear in the “Instructor
-View”</p>
+<p><strong>Timing.</strong> 10 minutes talking, 5 for the discussion. If
+the setup check turns up problems, give helpers the stragglers and keep
+going. Don’t let the whole room wait for one laptop.</p>
+<p><strong>The hook.</strong> Put the two logs up side by side. Don’t
+tell people which is “right”. Let them say it. Then say <em>“The code is
+identical.”</em> That is the idea of the whole workshop.</p>
+<p><strong>Noisy plot.</strong> Make sure everyone has seen the 71. In
+episode 7 they’ll write a feature to fix it, and it helps them to
+care.</p>
+<p><strong>Collaborator invitations.</strong> This is where people get
+stuck: the invitation sits in an email, and the invitee must accept.
+Check that pairs have done it <em>now</em>. On day 2, PR review needs
+it.</p>
+<p><strong>Common setup problems</strong> (see the setup page for
+fixes):</p>
+<ul>
+<li>forked with “Copy the main branch only” ticked (so only
+<code>main</code>, no tags): delete the fork and fork again</li>
+<li>no way to <code>git push</code> (authentication)</li>
+<li>
+<code>core.editor</code> not set, so the rebase editor will be
+vim</li>
+<li>virtual environment not active, so <code>pytest</code> is not
+found</li>
+</ul>
+<p><strong>Online.</strong> Drop the list of pairs in the chat, and
+create the breakout rooms before they’re needed. Have a helper in every
+room if possible.</p>
+<p><strong>Pairs with an odd number.</strong> A trio works: one person
+is the reviewer for the next.</p>
+<hr>
+<br></section><section id="02-mental-model"><h2 class="section-heading"><a href="02-mental-model.html">A Mental Model: Snapshots and Labels</a></h2>
+<hr class="half-width">
+<h3 id="02-mental-model-headingInstructor1">
+<a href="02-mental-model.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#02-mental-model-headingInstructor1"></a>
+</h3>
+<p>Keep this brisk (about 25 minutes). The goal is a <em>useful</em>
+model, not a complete one, and people may ask about trees, blobs or
+packfiles. Park those and point them at the extras. If you want a deeper
+treatment (optional, end of day 2, or the learner reference), the deep
+dive is: objects (blobs, trees, commits, tags), content addressing,
+<code>git hash-object</code>, <code>.git/objects</code>.</p>
+<p>Likely questions:</p>
+<ul>
+<li>
+<em>“So git doesn’t store diffs?”</em> Conceptually it stores
+snapshots. Under the hood it is clever about storing them compactly
+(packfiles), but you don’t need to care.</li>
+<li>
+<em>“What if two commits have the same content?”</em> Different
+parents or timestamps mean different hashes.</li>
+<li>
+<em>“Can I see the old commit later?”</em> Yes, that’s the
+next-but-one episode (reflog).</li>
+</ul>
+<hr>
+<br></section><section id="03-atomic-commits"><h2 class="section-heading"><a href="03-atomic-commits.html">Planning and Atomic Commits</a></h2>
+<hr class="half-width">
+<h3 id="03-atomic-commits-headingInstructor1">
+<a href="03-atomic-commits.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#03-atomic-commits-headingInstructor1"></a>
+</h3>
+<p>Timing: about 15 minutes of talk and 10 for the challenge. The
+challenge is <em>reading only</em>, in pairs, and we reuse the plan in
+episode 6. Keep it light: don’t spend long on commit message
+conventions, people have strong opinions and it is a rabbit hole. Show
+the table of “weak vs better” and move on.</p>
+<p>Possible discussion points:</p>
+<ul>
+<li>
+<strong>“Should tests go in the same commit as the code?”</strong>
+There are two schools of thought. Our view: yes, if a commit changes
+behaviour, the test for it belongs with it, so every commit stands
+alone. But a separate test commit is fine, and our messy branch has
+one.</li>
+<li>
+<strong>“This is too much work.”</strong> Answer: you will write
+less <em>time</em> worth of commit message than you save in review. And
+episodes 5 to 7 show how to get there without planning perfectly.</li>
+<li>
+<strong>“What about squash merging? Doesn’t that make this
+pointless?”</strong> Squash is a good fallback when a branch has
+<em>not</em> been curated, but it throws away exactly the story we’re
+trying to tell. We’ll come back to this in episode 9.</li>
+</ul>
+<p>Make sure everyone writes the plan down (a text file or paper).
+They’ll need it in episode 6.</p>
+<hr>
+<br></section><section id="04-reflog-safety-net"><h2 class="section-heading"><a href="04-reflog-safety-net.html">The Safety Net: Reflog</a></h2>
+<hr class="half-width">
+<h3 id="04-reflog-safety-net-headingInstructor1">
+<a href="04-reflog-safety-net.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#04-reflog-safety-net-headingInstructor1"></a>
+</h3>
+<p><strong>Pacing.</strong> This episode <em>is</em> the follow-along:
+learners type every step with you, so go slowly and pause after each
+command until people have caught up. There’s no separate challenge. If
+someone falls behind, they can watch and catch up at the knowledge
+check.</p>
+<p>Do the “oh no” moments as a live demo with everyone following. The
+drama is the point: say <em>“I’ve lost all my work!”</em> and pause
+before looking at the reflog.</p>
+<p>Cleanup: make sure everyone ends the episode with <code>main</code>
+checked out, and with a clean <code>git status</code>. A bad
+<code>README.md</code> change left on <code>main</code> would cause
+confusing conflicts later. If anyone committed to <code>main</code> by
+mistake: <code>git reset --hard origin/main</code> (they have a fork, so
+it will be at the right place).</p>
+<p>VS Code has no built-in reflog view. (The GitLens extension adds
+one.) This is a terminal job.</p>
+<p>Common problems:</p>
+<ul>
+<li>The reflog opens in a pager and people don’t know how to leave. It’s
+<code>q</code>.</li>
+<li>Someone runs <code>git reset --hard</code> with uncommitted work,
+and asks about it. Use it as the live demonstration of “what the reflog
+can’t save”.</li>
+</ul>
+<hr>
+<br></section><section id="05-staging-amend-reset"><h2 class="section-heading"><a href="05-staging-amend-reset.html">Shaping a Commit: Staging, Amend, Reset and Restore</a></h2>
+<hr class="half-width">
+<h3 id="05-staging-amend-reset-headingInstructor1">
+<a href="05-staging-amend-reset.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#05-staging-amend-reset-headingInstructor1"></a>
+</h3>
+<p><strong>Demo first (about 5 minutes).</strong> Do the first hunk of
+the challenge live in VS Code, so people see <em>Stage Selected
+Ranges</em> working: undo the commit, stage the lines about
+<code>--title</code> in <code>cli.py</code>, and show the file in both
+the <em>Staged</em> and the <em>Changes</em> lists. Then leave the rest
+to them.</p>
+<p>Things that go wrong:</p>
+<ul>
+<li>
+<strong>“Stage Selected Ranges” is greyed out.</strong> They
+selected lines in the left (old) side of the diff or nothing at all. It
+has to be the right-hand side.</li>
+<li>
+<strong>They stage the whole file</strong> by clicking
+<code>+</code>. They can unstage it again with <code>-</code>, or
+<strong>Unstage Selected Ranges</strong> for a part.</li>
+<li>
+<strong>They commit the debug print</strong> and then need to remove
+it. Fine: it’s a chance to show <code>git commit --amend</code>, or
+<code>git reset HEAD^</code> and again.</li>
+<li>
+<strong>They discard something they wanted</strong> with <em>Revert
+Selected Ranges</em>. If it was committed, the reflog has it. If not,
+it’s gone. Use it as a reminder of episode 4.</li>
+<li>
+<strong>VS Code shows no <code>...</code> menu or Amend
+option:</strong> an older VS Code. Use the command line.</li>
+</ul>
+<p>Don’t skip the debrief (3 minutes). Ask: <em>“How did you decide
+which lines go in which commit?”</em> The answer, “by the idea they
+belong to”, is the skill.</p>
+<p>The <code>untangle</code> branch is built by
+<code>tools/build_starter.py</code>, and is the same for everyone.</p>
+<hr>
+<br></section><section id="06-interactive-rebase"><h2 class="section-heading"><a href="06-interactive-rebase.html">Interactive Rebase: Rewriting a Messy Branch</a></h2>
+<hr class="half-width">
+<h3 id="06-interactive-rebase-headingInstructor1">
+<a href="06-interactive-rebase.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#06-interactive-rebase-headingInstructor1"></a>
+</h3>
+<p>Pause here until everyone has five commits. The commonest problems
+are:</p>
+<ul>
+<li>The editor opened in vim (not VS Code), so <code>core.editor</code>
+wasn’t set. Fix it with
+<code>git config --global core.editor "code --wait"</code>. If they are
+stuck in vim: <code>:q!</code> aborts the rebase step.</li>
+<li>Typing in the wrong order. Remember it’s oldest first.</li>
+<li>Saving the file but not closing the VS Code tab. Git waits until the
+tab is closed.</li>
+<li>A commit moved above one that touches the same file, and a conflict.
+They can <code>git rebase --abort</code> and start again, with the todo
+list given in the solution.</li>
+</ul>
+<hr>
+<br><h3 id="06-interactive-rebase-headingInstructor2">
+<a href="06-interactive-rebase.html#headingInstructor2">Instructor Note</a><a class="anchor" aria-label="anchor" href="#06-interactive-rebase-headingInstructor2"></a>
+</h3>
+<p>Give people about 10 to 12 minutes, then review it together.
+Live-demo the solution in the VS Code terminal while someone describes
+what they did.</p>
+<p>Make sure nobody merges <code>background-subtraction</code> into
+<code>main</code> at the end. Tomorrow, <code>main</code> has to be
+unchanged so that the colleague’s branch can be fast-forwarded onto it
+(episode 9). If anyone does, <code>git reset --hard origin/main</code>
+on <code>main</code> puts it right.</p>
+<p>Things that commonly go wrong:</p>
+<ul>
+<li>
+<strong>Forgetting <code>git rebase --continue</code></strong> after
+the split. <code>git status</code> says “interactive rebase in
+progress”.</li>
+<li>
+<strong><code>git reset --hard</code> instead of
+<code>git reset</code>.</strong> The changes are gone from the working
+directory! Show them how to recover: <code>git rebase --abort</code>,
+then start rebase 2 again.</li>
+<li>
+<strong>Staged everything in one go</strong>, ending with a single
+commit again. Check with <code>git show --stat</code>.</li>
+<li>A <strong>conflict</strong> in a reword step. This shouldn’t happen
+in this exercise. If it does, <code>git rebase --abort</code> and
+restart.</li>
+<li>
+<strong>Someone who is hopelessly lost:</strong> have them
+<code>git rebase --abort</code> (if in a rebase), then
+<code>git reset --hard backup/background-subtraction</code>, and go
+again from rebase 1. If they have no backup, a helper can give them the
+clean result (see the instructor guide for the rescue commands).</li>
+</ul>
+<hr>
+<br></section><section id="07-feature-workflow"><h2 class="section-heading"><a href="07-feature-workflow.html">The Daily Loop: Fixup and Autosquash</a></h2>
+<hr class="half-width">
+<h3 id="07-feature-workflow-headingInstructor1">
+<a href="07-feature-workflow.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#07-feature-workflow-headingInstructor1"></a>
+</h3>
+<p><strong>Demo (about 8 minutes, with learners following).</strong>
+It’s deliberately short: two commits, one docstring fixup, and the
+autosquash. People copy the code from the page, so the demo is about the
+<em>git</em>. The key moments to slow down for:</p>
+<ol style="list-style-type: decimal">
+<li>Spotting the missing docstring, and the thought <em>“this belongs to
+commit 1, not a new commit.”</em> Say it out loud.</li>
+<li>The <code>fixup!</code> commit at the end of the log, then the todo
+list with the <code>fixup</code> line <em>already moved</em> up under
+its commit. Pause here. People find this a pleasant surprise.</li>
+<li>The log afterwards: no fixup, nothing to hide.</li>
+</ol>
+<p>Save the time for the challenge, where they do it all themselves (and
+meet a bug that a test catches).</p>
+<p><strong>Challenge (28 minutes).</strong> Pairs: each person works
+alone on their own computer, but can ask the other. Online: breakout
+rooms of two.</p>
+<p>Common problems:</p>
+<ul>
+<li>
+<strong><code>git commit --fixup</code> with a wrong hash</strong>
+(or a hash from before an earlier rebase).
+<code>git log --oneline main..</code> and try again. If the fixup is
+wrong, <code>git reset --soft HEAD^</code> and redo it.</li>
+<li>
+<strong>The test doesn’t fail.</strong> They fixed the bug while
+writing the helper. Tell them to paste the code exactly as written.</li>
+<li>
+<strong>B: only one <code>&gt;=</code> fixed.</strong> The test
+still fails. Both loops need changing.</li>
+<li>
+<strong>Autosquash doesn’t reorder anything.</strong> They ran
+<code>git rebase main</code> without <code>-i</code> (no autosquash), or
+the <code>rebase.autoSquash</code> setting is missing. Use
+<code>git rebase -i --autosquash main</code>.</li>
+<li>
+<strong>Editor doesn’t open or hangs.</strong>
+<code>core.editor</code> isn’t <code>code --wait</code> (see
+setup).</li>
+<li>
+<strong>A conflict during autosquash.</strong> Rare here.
+<code>git rebase --abort</code>, and check the fixup only touches the
+lines it should.</li>
+</ul>
+<p><strong>Pushing:</strong> <code>git push</code> needs authentication
+to work, which was part of the setup. If someone’s push fails, pair them
+with a helper rather than losing time. They can still finish the
+exercise locally, and push later.</p>
+<p><strong>End of day 1.</strong> Before finishing, check everyone
+has:</p>
+<ul>
+<li>a pushed branch (<code>feature-prominence</code> or
+<code>feature-widths</code>) on their fork</li>
+<li>
+<code>main</code> unchanged, and a clean
+<code>git status</code>
+</li>
+</ul>
+<p>Preview day 2: <em>“Overnight, a colleague’s pull request gets merged
+into main. It touches the same function as yours…”</em></p>
+<hr>
+<br></section><section id="08-day2-recap"><h2 class="section-heading"><a href="08-day2-recap.html">Day 2 Recap and Warm-up</a></h2>
+<hr class="half-width">
+<h3 id="08-day2-recap-headingInstructor1">
+<a href="08-day2-recap.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#08-day2-recap-headingInstructor1"></a>
+</h3>
+<p>Keep this to about 10 minutes. The quiz can be done by a show of
+hands, or by cold-calling. Don’t let it turn into a lecture.</p>
+<p><strong>State check.</strong> The point is to find the people with a
+broken day-1 state <em>before</em> they hit episode 9. Common
+problems:</p>
+<ul>
+<li>
+<code>main</code> has local commits, because they committed to it by
+mistake. <code>git reset --hard origin/main</code> fixes it.</li>
+<li>The feature branch still contains <code>fixup!</code> commits, so
+they never ran the autosquash. They can do it now:
+<code>git rebase -i --autosquash main</code>.</li>
+<li>They never pushed. <code>git push</code>.</li>
+<li>The fork is missing the colleague’s branch (they forked with the
+default-branch-only option). Tomorrow’s story needs
+<code>colleague/normalise-modes</code>. They can fetch it from the
+original repository (<code>git remote add upstream &lt;url&gt;</code>,
+<code>git fetch upstream</code>) and push it to their fork, but it’s
+often quicker to re-fork.</li>
+</ul>
+<p><strong>Fallback branches.</strong> Have a ready-made
+<code>feature-prominence</code> and <code>feature-widths</code>
+available for anyone who lost theirs. These aren’t published to the
+learners’ forks, so give the helpers a way to hand them out.</p>
+<hr>
+<br></section><section id="09-rebase-vs-merge"><h2 class="section-heading"><a href="09-rebase-vs-merge.html">Rebase vs Merge, and Resolving Conflicts</a></h2>
+<hr class="half-width">
+<h3 id="09-rebase-vs-merge-headingInstructor1">
+<a href="09-rebase-vs-merge.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#09-rebase-vs-merge-headingInstructor1"></a>
+</h3>
+<p><strong>Plan (about 35 minutes).</strong> Roughly: 10 minutes of
+explanation with the diagrams, 5 to fast-forward <code>main</code>, 5
+for <strong>your demonstration</strong> of the merge (conflict, merge
+editor, graph, undo), 8 for the rebase challenge on their own, and 5 for
+the push and the buttons. The merge is a <strong>demo</strong>: learners
+watch and don’t type, so they resolve the conflict once, themselves, in
+the rebase. If you’re running short, skip the demo: the diagram already
+shows the double back.</p>
+<p><strong>The demo is where you teach the merge editor.</strong> Open
+it, explain the three panes, and say out loud <em>“which side has the
+colleague’s change, and which has mine?”</em> before clicking anything.
+Then they do the same, alone, in the rebase.</p>
+<p><strong>Roles swap in a rebase.</strong> Current and Incoming mean
+the opposite of merge. This catches everyone out. Spend a minute on the
+callout.</p>
+<p><strong>Common problems:</strong></p>
+<ul>
+<li>
+<strong>They click “Accept Current” or “Accept Incoming”</strong> on
+a whole conflict and lose half of what they wanted. Check that the
+result has <em>both</em> <code>Peak(...)</code> and their new option
+(<code>git diff main</code> should show their feature).
+<code>pytest</code> will also fail with a <code>NameError</code> or
+<code>TypeError</code>.</li>
+<li>
+<strong>They leave the markers in</strong>
+(<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>).
+<code>git diff --check</code> finds them.</li>
+<li>
+<strong>They forget <code>git rebase --continue</code></strong>:
+<code>git status</code> says “rebase in progress”.</li>
+<li>
+<strong>An editor tab opens</strong> after <code>--continue</code>
+(it’s the commit message). Tell them to close the tab. If the editor
+isn’t set, they get vim; see the setup page.</li>
+<li>
+<strong>They run <code>git pull</code> after being told not
+to</strong>: have them <code>git reflog</code> and reset, as in episode
+4. A good chance to show it working.</li>
+<li>
+<strong>They use <code>--force</code></strong> rather than
+<code>--force-with-lease</code>. Remind them.</li>
+<li>
+<strong><code>git merge --ff-only</code> refuses:</strong> their
+<code>main</code> has commits of its own.
+<code>git reset --hard origin/main</code> first (then redo the
+fast-forward).</li>
+<li>The <strong>one failing test</strong> after the rebase isn’t a
+mistake: it is the hook for episode 10. Don’t explain it yet.</li>
+</ul>
+<p><strong>If someone is hopelessly stuck:</strong>
+<code>git rebase --abort</code>, and give them the resolved
+<code>peaks.py</code> from the solution, or have a helper pair with
+them.</p>
+<p><strong>Bridge to episode 10:</strong> <em>“We have one failing test,
+and it isn’t in our code. What changed?”</em></p>
+<hr>
+<br></section><section id="10-history-archaeology"><h2 class="section-heading"><a href="10-history-archaeology.html">Tracking Down a Bug: Blame and Bisect</a></h2>
+<hr class="half-width">
+<h3 id="10-history-archaeology-headingInstructor1">
+<a href="10-history-archaeology.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#10-history-archaeology-headingInstructor1"></a>
+</h3>
+<p><strong>Plan (about 30 minutes).</strong> Roughly: 3 for the failing
+test and blame, 7 for bisect (you explain and show the by-hand version,
+then they run <code>bisect run</code>), 15 for the fix, merge and
+rebase. If it runs long, trim in this order: the by-hand demo, the
+<code>-S</code>/<code>-L</code> callout, then the Knowledge check.</p>
+<p><strong>Bisect has two layers.</strong> Show the by-hand version
+once, briefly, so the idea of “binary search” lands. Then learners only
+type the three-line <code>bisect run</code>, which takes seconds.</p>
+<p><strong>No pull request here, by design.</strong> The fix goes
+straight into <code>main</code> with a fast-forward, which keeps this
+episode short and saves the pull request mechanics for episode 11. Say
+out loud that a real team <em>would</em> open one.</p>
+<p><strong>Common problems:</strong></p>
+<ul>
+<li>
+<strong><code>git bisect</code> refuses</strong>, because of
+uncommitted changes. Stash or commit.</li>
+<li>
+<strong>They forget <code>git bisect reset</code></strong>, and
+wonder why they’re on a detached <code>HEAD</code>.
+<code>git bisect reset</code> fixes it.</li>
+<li>
+<strong>They give git the arguments the wrong way round</strong>
+(<code>git bisect start v0.1.0 main</code>): bad first, then good. The
+result will be nonsense. <code>git bisect reset</code> and again.</li>
+<li>
+<strong>Bisecting the whole test suite</strong> rather than
+<code>tests/test_normalise.py</code>: other failures can confuse
+it.</li>
+<li>
+<strong>No <code>v0.1.0</code> tag.</strong> Their fork has no tags.
+<code>git tag</code> shows what’s there. They can fetch tags from the
+original repository, or pair up.</li>
+<li>
+<strong><code>git merge --ff-only</code> refuses.</strong>
+<code>main</code> has moved, or they committed the fix on the wrong
+branch. <code>git status</code>, <code>git log --oneline --graph</code>,
+and check they branched from <code>main</code>.</li>
+<li>
+<strong><code>git branch -d fix/normalise</code> fails</strong> with
+“not fully merged”. The merge didn’t happen, or they’re on the wrong
+branch.</li>
+<li>
+<strong>A conflict in the second rebase</strong>: it shouldn’t
+happen. It means they changed <code>normalise.py</code> in their feature
+branch.</li>
+</ul>
+<p><strong>Bridge to episode 11:</strong> <em>“Your feature is ready, on
+top of a working <code>main</code>. Time to ask your partner to review
+it.”</em></p>
+<hr>
+<br></section><section id="11-pull-requests"><h2 class="section-heading"><a href="11-pull-requests.html">Pull Requests: Authoring and Reviewing</a></h2>
+<hr class="half-width">
+<h3 id="11-pull-requests-headingInstructor1">
+<a href="11-pull-requests.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#11-pull-requests-headingInstructor1"></a>
+</h3>
+<p><strong>Timing (about 30 minutes).</strong> 12 minutes of talk, then
+the exercises in time-boxes: open the pull request (4), review (8),
+respond and approve (6). Use a visible timer. Review takes longest, so
+don’t let it overrun: <strong>three comments only</strong>. The
+<strong>Finishing</strong> section (squash and merge) is optional in the
+session: say it’s there for when they have time, or to do later.
+(Learners who don’t merge won’t be affected: nothing in the later
+episodes needs this feature merged.)</p>
+<p><strong>The base repository trap.</strong> Check screens as people
+open their pull requests. Anything opened against the course repository
+should be closed and re-opened on the fork.</p>
+<p><strong>Pairs.</strong> Make sure each learner has been added as a
+collaborator (episode 1), and the invitation accepted: they need it to
+be asked for a review. If a partner is missing or behind, pair them with
+a helper, or have them review the instructor’s example pull request.</p>
+<p><strong>Online.</strong> Breakout rooms of two. Ask people to share
+the pull request link in the chat or room.</p>
+<p><strong>Common problems:</strong></p>
+<ul>
+<li>
+<strong>The pull request is against the course repository.</strong>
+Close it and open a new one on the fork.</li>
+<li>
+<strong>The reviewer can’t find the pull request.</strong> Send the
+link. Check notification emails.</li>
+<li>
+<strong>They <code>git commit --fixup</code> the wrong
+commit.</strong> The autosquash puts the change in the wrong place.
+<code>git rebase --abort</code>, or fix it with another interactive
+rebase.</li>
+<li>
+<strong>They squash before the reviewer has looked</strong> and then
+wonder where their comments went. GitHub keeps them, marked
+“outdated”.</li>
+<li>
+<strong>No partner.</strong> Use the prepared example pull request.
+Have one ready on your own fork, with a few things to comment on.</li>
+<li>
+<strong><code>git diff @{u} HEAD</code> isn’t empty.</strong>
+Something else changed. Look at it with
+<code>git diff @{u} HEAD --stat</code>.</li>
+<li>
+<strong><code>@{u}</code> means nothing</strong>, or errors: the
+branch has no upstream. <code>git push -u origin &lt;branch&gt;</code>
+sets it.</li>
+<li>
+<strong><code>@{u}</code> in some shells needs quoting</strong>
+(<code>'@{u}'</code>). In Git Bash it works as is.</li>
+<li>
+<strong>After merging, the branch still shows in the list.</strong>
+There is a <strong>Delete branch</strong> button on the merged pull
+request.</li>
+</ul>
+<p><strong>What to point out:</strong> that every commit and every
+comment they wrote on day 1 and now is the thing the reviewer is
+reading. A reviewer who can follow the story approves faster.</p>
+<hr>
+<br></section><section id="12-ci-and-quality"><h2 class="section-heading"><a href="12-ci-and-quality.html">Catching Problems Early: Shift Left and CI</a></h2>
+<hr class="half-width">
+<h3 id="12-ci-and-quality-headingInstructor1">
+<a href="12-ci-and-quality.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#12-ci-and-quality-headingInstructor1"></a>
+</h3>
+<p><strong>Timing (about 26 minutes).</strong> Talk for 10: the table of
+stages is the key idea, and the stage 2 and 3 sections can be quick.
+Then the single challenge, which has just <strong>one pull
+request</strong> for both exercises. <strong>Start the CI pull request
+early and talk while it runs</strong>: the first run takes up to a
+minute, and there’s waiting time in the exercise. If you’re short on
+time, do part 1 together, then do part 2 and 3 (break and fix) as a
+<strong>demonstration</strong> on your screen. The “going further” step
+is talking only.</p>
+<p><strong>Emphasise the principle</strong>: <em>push each check left
+until it’s too slow or annoying</em>. Ask the room: “what do you already
+run before pushing?”</p>
+<p><strong>Test this before the workshop.</strong> I could check the
+workflow with <code>actionlint</code> and its commands in a clean
+environment, but not run it on GitHub. Do the whole exercise on a real
+fork the day before. Also re-check the versions of
+<code>actions/checkout</code> and <code>actions/setup-python</code>.</p>
+<p><strong>Actions must be enabled on each fork</strong> (setup page,
+step 6). Ask for a show of hands before you start. The
+<strong>Actions</strong> tab shows an enable button if not.</p>
+<p><strong>Common problems:</strong></p>
+<ul>
+<li>
+<strong>Nothing happens on the pull request.</strong> Actions is
+disabled on the fork, or the file isn’t in
+<code>.github/workflows/</code>, or the pull request is on the course
+repository instead of the fork.</li>
+<li>
+<strong>The workflow fails with a YAML error.</strong> Indentation,
+or a tab. Open the <strong>Actions</strong> tab and read the error.</li>
+<li>
+<strong>“Rebase and merge” is greyed out.</strong> The branch isn’t
+up to date, or the repository setting is off. Check <em>Settings</em>
+then <em>General</em> then <em>Pull Requests</em>.</li>
+<li>
+<strong>The test doesn’t fail in the break-and-fix.</strong> They
+renamed the string in the test as well. Start again.</li>
+<li>
+<strong>After the autosquash the push is rejected:</strong> use
+<code>--force-with-lease</code>.</li>
+</ul>
+<p><strong>Prepare a fallback before the session.</strong> Actions is
+the part most likely to slow the room down (it runs on GitHub, so you
+can’t control the timing). Have these ready:</p>
+<ul>
+<li>
+<strong>A prepared fork</strong> with the <code>add-ci</code> pull
+request already open: a <strong>green</strong> run, and then the
+breaking commit with a <strong>red</strong> run, and a link to each. (Or
+screenshots of each stage if you can’t rely on the network.)</li>
+<li>A decision made in advance about when to <strong>stop
+waiting</strong>. A sensible rule: if checks haven’t appeared after two
+minutes, you screenshare the prepared run and move on.</li>
+<li>
+<strong>Three levels of fallback</strong>, from best to simplest:
+(1) learners run it themselves; (2) learners do the git steps, and you
+demonstrate the Actions results on your screen; (3) you explain and
+demonstrate everything, and learners just read the workflow file. Any of
+them still teaches the idea.</li>
+</ul>
+<p><strong>Limits.</strong> Public repositories get free Actions
+minutes. If the fork is private, the allowance is limited. Forks of
+public repositories are public.</p>
+<p><strong>Bridge to episode 13:</strong> <em>“We have a fix, merged on
+<code>main</code>. But users are still running version 0.2, which has
+the bug. How do we get the fix to them?”</em></p>
+<hr>
+<br></section><section id="13-releases-and-cherry-pick"><h2 class="section-heading"><a href="13-releases-and-cherry-pick.html">Releases: Versions, Tags and Cherry-pick</a></h2>
+<hr class="half-width">
+<h3 id="13-releases-and-cherry-pick-headingInstructor1">
+<a href="13-releases-and-cherry-pick.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#13-releases-and-cherry-pick-headingInstructor1"></a>
+</h3>
+<p><strong>Timing (about 35 minutes).</strong> 15 minutes for the
+lifecycle, versions, tags and cherry-pick, and 20 for the exercise. The
+GitHub release is optional, and a good thing to demo while people
+finish.</p>
+<p><strong>Keep the lifecycle simple.</strong> Don’t be drawn into
+branching-model debates. If someone asks about git flow, say it’s a
+heavier version of the same idea, for software with scheduled releases,
+and move on.</p>
+<p><strong>Find the fix by its message.</strong> Learners deleted their
+<code>fix/normalise</code> branch in episode 10, so they look up the
+commit on <code>main</code> with <code>git log --grep</code>. (The hash
+is the same one the branch had, but they may not have noted it.)</p>
+<p><strong>Common problems:</strong></p>
+<ul>
+<li>
+<strong><code>git cherry-pick</code> says the commit is empty or
+already applied.</strong> They are on <code>main</code> instead of
+<code>release/0.2</code>. Check
+<code>git branch --show-current</code>.</li>
+<li>
+<strong><code>git switch -c release/0.2 v0.2.0</code> says the tag
+doesn’t exist.</strong> Their fork has no tags (forked with “Copy the
+default branch only”). <code>git tag</code> shows what’s there. They can
+fetch tags from the original repository, or pair up.</li>
+<li>
+<strong>They forget <code>-x</code>.</strong> Harmless here, but
+explain what it would have told them.</li>
+<li>
+<strong>A conflict on the cherry-pick.</strong> It shouldn’t happen.
+If it does, they’ve probably edited <code>normalise.py</code> on the
+release branch. <code>git cherry-pick --abort</code> and start
+again.</li>
+<li>
+<strong>They tag with a lightweight tag</strong> (no
+<code>-a</code>). It works, but <code>git tag -n</code> shows no
+message. Delete it (<code>git tag -d v0.2.1</code>) and re-tag.</li>
+<li>
+<strong>The tag doesn’t appear on GitHub.</strong> They pushed the
+branch but not the tag. <code>git push origin v0.2.1</code>.</li>
+<li>
+<strong>No “Create a new release” button.</strong> On a fork, check
+<strong>Releases</strong> is enabled under <em>Settings</em>.</li>
+</ul>
+<p><strong>Bridge to episode 14:</strong> <em>“That’s the whole
+workflow. A few things to make it quicker.”</em></p>
+<hr>
+<br></section><section id="14-tooling-and-wrapup"><h2 class="section-heading"><a href="14-tooling-and-wrapup.html">Tooling and Wrap-up</a></h2>
+<hr class="half-width">
+<h3 id="14-tooling-and-wrapup-headingInstructor1">
+<a href="14-tooling-and-wrapup.html#headingInstructor1">Instructor Note</a><a class="anchor" aria-label="anchor" href="#14-tooling-and-wrapup-headingInstructor1"></a>
+</h3>
+<p><strong>This episode is a menu.</strong> It’s fine to skip most of
+it, or to tell people it’s there to read afterwards. If you do one
+thing, do the take-aways and the “one habit” challenge.</p>
+<p><strong>The challenge</strong> is also a quiet way to end. Ask two or
+three people to share their chosen habit.</p>
+<p><strong>Before you finish:</strong> point people to the reference
+page, remind them their forks and branches are theirs to keep, and share
+the feedback link.</p>
+<p><strong>Optional extras for a longer session or a follow-up:</strong>
+how git stores files (objects, trees, packfiles),
+<code>git bisect</code> with a script on a bigger history,
+<code>git rerere</code> in action, worktrees as an exercise, and a look
+at a real project’s pull requests.</p>
 <hr>
 <br></section></section>
 </div>
@@ -358,14 +1593,14 @@ View”</p>
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/README.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/AlexCK-STFC/stfc-git-advanced/edit/main/README.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/carpentries/workbench-template-md/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/carpentries/workbench-template-md/" class="external-link">Source</a></p>
+        | <a href="https://github.com/AlexCK-STFC/stfc-git-advanced/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/AlexCK-STFC/stfc-git-advanced/" class="external-link">Source</a></p>
         <p>
         <a href="../citation.html">Cite</a>
-        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="mailto:210735915+AlexCK-STFC@users.noreply.github.com">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -385,18 +1620,18 @@ View”</p>
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://carpentries.github.io/workbench-template-md/instructor/instructor-notes.html",
+  "@id": "https://AlexCK-STFC.github.io/stfc-git-advanced/instructor/instructor-notes.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "software, data, lesson, The Carpentries",
   "name": "Instructor Notes",
   "creativeWorkStatus": "active",
-  "url": "https://carpentries.github.io/workbench-template-md/instructor/instructor-notes.html",
-  "identifier": "https://carpentries.github.io/workbench-template-md/instructor/instructor-notes.html",
+  "url": "https://AlexCK-STFC.github.io/stfc-git-advanced/instructor/instructor-notes.html",
+  "identifier": "https://AlexCK-STFC.github.io/stfc-git-advanced/instructor/instructor-notes.html",
   "dateCreated": "2026-10-30",
-  "dateModified": "2026-10-30",
-  "datePublished": "2026-10-30"
+  "dateModified": "2026-11-02",
+  "datePublished": "2026-11-02"
 }
 
   </script><script>
