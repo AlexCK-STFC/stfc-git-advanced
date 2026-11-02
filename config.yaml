@@ -69,6 +69,7 @@ contact: '210735915+AlexCK-STFC@users.noreply.github.com' # FIXME
 episodes:
 - 01-welcome-and-story.md
 - 02-mental-model.md
+- 03-atomic-commits.md
 
 # Information for Learners
 learners:
