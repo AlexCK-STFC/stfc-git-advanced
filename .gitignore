@@ -49,3 +49,7 @@ docs/
 # translation temp files
 po/*~
 
+
+# built output of tools/build_starter.py
+/build/
+/tools/check_diagrams/node_modules/
