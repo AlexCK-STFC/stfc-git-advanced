@@ -67,7 +67,7 @@ contact: '210735915+AlexCK-STFC@users.noreply.github.com' # FIXME
 
 # Order of episodes in your lesson
 episodes:
-- introduction.md
+- 01-welcome-and-story.md
 
 # Information for Learners
 learners:
