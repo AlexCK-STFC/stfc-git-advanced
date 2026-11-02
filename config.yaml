@@ -70,6 +70,7 @@ episodes:
 - 01-welcome-and-story.md
 - 02-mental-model.md
 - 03-atomic-commits.md
+- 04-reflog-safety-net.md
 
 # Information for Learners
 learners:
