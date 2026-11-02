@@ -71,6 +71,7 @@ episodes:
 - 02-mental-model.md
 - 03-atomic-commits.md
 - 04-reflog-safety-net.md
+- 05-staging-amend-reset.md
 
 # Information for Learners
 learners:
