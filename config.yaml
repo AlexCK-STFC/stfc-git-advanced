@@ -78,6 +78,7 @@ episodes:
 - 09-rebase-vs-merge.md
 - 10-history-archaeology.md
 - 11-pull-requests.md
+- 12-ci-and-quality.md
 
 # Information for Learners
 learners:
