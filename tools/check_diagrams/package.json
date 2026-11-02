@@ -1,0 +1,11 @@
+{
+  "name": "check-diagrams",
+  "private": true,
+  "type": "module",
+  "description": "Syntax-check (and optionally render) the Mermaid diagrams in the lesson",
+  "dependencies": {
+    "@mermaid-js/mermaid-cli": "^11.0.0",
+    "jsdom": "^26.0.0",
+    "mermaid": "^11.0.0"
+  }
+}
