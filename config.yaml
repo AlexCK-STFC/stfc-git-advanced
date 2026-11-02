@@ -73,6 +73,7 @@ episodes:
 - 04-reflog-safety-net.md
 - 05-staging-amend-reset.md
 - 06-interactive-rebase.md
+- 07-feature-workflow.md
 
 # Information for Learners
 learners:
