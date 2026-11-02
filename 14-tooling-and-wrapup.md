@@ -153,7 +153,7 @@ If you're not sure, try this on your next piece of work: write the commit plan f
 - **Learn Git Branching**, an interactive game that draws the graphs as you type: [learngitbranching.js.org](https://learngitbranching.js.org).
 - **Conventional Commits**, if you want a commit message convention: [conventionalcommits.org](https://www.conventionalcommits.org).
 - The [reference page](reference.html) in this lesson has a cheat sheet of the commands and a glossary.
-- Come back to the **extras**. We skipped how git stores files (blobs, trees and packfiles). If you're curious, `git cat-file -p` and the "Git Internals" chapter of Pro Git are the place to start.
+- The [extras page](extras.html) has a short guided peek inside `.git` (blobs, trees and packfiles), and reading on how git works, on branching models such as git flow, and on the topics in this workshop.
 
 ## Thank you
 
